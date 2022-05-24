@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import Loading from '../Shared/Loading';
+import useToken from '../../Hooks/useToken';
 const Signup = () => {
 
   const emailRef = useRef();
@@ -25,11 +26,13 @@ const Signup = () => {
     error,
 ] = useCreateUserWithEmailAndPassword(auth);
   let signInError;
+  const[token]=useToken(user||Guser)
   const navigate = useNavigate();
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
-    if (user || Guser) {
-      navigate(from, { replace: true });
+    if (token) {
+       navigate(from, { replace: true });
+       console.log(token);
     }
   
 

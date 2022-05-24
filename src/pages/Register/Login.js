@@ -8,14 +8,16 @@ import { Form } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import Loading from '../Shared/Loading';
 import { async } from '@firebase/util';
+import useToken from '../../Hooks/useToken';
+
 const Login = () => {
+
+    
     const emailRef =useRef()
    
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     
-   
-  
-   
+    
     const { register, formState: { errors }, handleSubmit,reset} = useForm();
   const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
   const [
@@ -25,14 +27,16 @@ const Login = () => {
     error,
 ] = useSignInWithEmailAndPassword(auth);
 let signInError;
+const [token]=useToken(user||Guser)
 const navigate = useNavigate();
 const location = useLocation();
 let from = location.state?.from?.pathname || "/";
 useEffect( () =>{
-    if (user || Guser) {
+    if (token) {
         navigate(from, { replace: true });
+       
     }
-}, [user, Guser, from, navigate])
+}, [token,from,navigate])
 
 if (loading || Gloading) {
     return <Loading></Loading>
@@ -138,6 +142,9 @@ const resetPassword = async () => {
         onClick={() => signInWithGoogle()}
       />
        </div>
+       {
+        
+       }
  </div>
 };
 

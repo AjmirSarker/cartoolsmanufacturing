@@ -12,6 +12,7 @@ const Header = () => {
   const [user, loading] = useAuthState(auth);
   const handleSignOut=()=>{
     signOut(auth)
+    localStorage.removeItem('accessToken')
   }
     return (
         <div>
@@ -28,10 +29,13 @@ const Header = () => {
               <CustomLink className="nav-link fs-4 " to="/allproducts" >All Products</CustomLink>
               
               <CustomLink className="nav-link fs-4"  to="/blog" >Blogs</CustomLink>
+              <CustomLink className="nav-link fs-4"  to="/reviews" >Review</CustomLink>
+              <CustomLink className="nav-link fs-4"  to="/dashboard" >DashBoard</CustomLink>
              {
                user?<p className='text-info'>{user.email}</p>:''
 
              }
+
              
              
             </Nav>
