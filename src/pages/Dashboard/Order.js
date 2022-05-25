@@ -7,11 +7,12 @@ const Order = ({ index,order }) => {
   const [Order, setOrder] = useState([]);
   useEffect(() => {
     
-      fetch(`http://localhost:5000/products?name=${order?.product}`)
+      fetch(`http://localhost:5000/product?name=${order?.product}`)
         .then((res) => res.json())
         .then((data) => setOrder(data));
     
   }, [order]);
+  // console.log(Order);
   const [Delete, setDelete] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -36,6 +37,7 @@ const Order = ({ index,order }) => {
             setShow(false)
           }
         });
+
     } else {
     }
   };

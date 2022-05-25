@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [order, setOrder] = useState([])
     useEffect(()=>{
         if(user){
-        fetch(`http://localhost:5000/orders?email=${user?.email}`)
+        fetch(`http://localhost:5000/individual?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setOrder(data))
         }

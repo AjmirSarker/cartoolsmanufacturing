@@ -57,6 +57,35 @@ navigate('/')
      
     } else {
       toast.success('You are ready to serve');
+      let quantityNumber = parseInt(product.quantity);
+      let quantityNumberUp = parseInt(productQuantity);
+      let updateTheQuantity= quantityNumber-quantityNumberUp
+      let newQuantity={
+_id:product._id,
+name:product.name,
+img1:product.img1,
+img2:product.img2,
+price:product.price,
+quantity:updateTheQuantity,
+minorder:product.minorder,
+description:product.description
+      }
+      const url2 = `http://localhost:5000/products/${id}`;
+      fetch(url2, {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newQuantity)
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          
+            setProducts(newQuantity);
+            console.log('data success', data);
+          
+        });
+
       const url = 'http://localhost:5000/orders';
     fetch(url, {
       method: 'POST',
@@ -72,6 +101,7 @@ navigate('/')
       e.target.reset()
       setCount(false);
     }
+
     
   };
   const HandleAddItem = (e) => {
