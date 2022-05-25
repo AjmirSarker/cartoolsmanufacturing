@@ -16,7 +16,7 @@ const MyOrders = () => {
         .then(data => setOrder(data))
         }
         }
-        ,[user])
+        ,[user,order])
     return (
       
         <div>
@@ -24,7 +24,7 @@ const MyOrders = () => {
             <div  className='my-5 text-center'>
               
                 <h6 className=''>{user?.email}</h6>
-                <h1 className=''>ADDED ITEMS</h1>
+                <h1 className=''>ORDERED ITEMS</h1>
             </div>
            
            <table class="table OverflowX table-borderless table-info container border mt-5 shadow border-warning">

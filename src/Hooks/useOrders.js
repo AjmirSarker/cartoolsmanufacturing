@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const useReviews = () => {
+const useOrders = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     fetch('http://localhost:5000/orders')
@@ -12,4 +12,4 @@ const useReviews = () => {
   return [orders,setOrders];
 };
 
-export default useReviews ;
+export default useOrders;
