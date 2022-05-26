@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AllProducts from '../../Allproducts/AllProducts';
 import Product from '../../Allproducts/Product';
 import Myteam from '../../ExtraPart/Myteam';
+import SpecialItem from '../../ExtraPart/SpecialItem';
 import useData from '../../Hooks/useData';
 import useReviews from '../../Hooks/useReviews';
 import HomeReview from '../../Review/HomeReview';
@@ -63,6 +64,12 @@ const Home = () => {
          
 
 <HomeReview></HomeReview>
+<div className='bg-success p-2 mt-5'>
+<div className='my-5 container'>
+    <SpecialItem></SpecialItem>
+
+</div>
+</div>
 
             
          
