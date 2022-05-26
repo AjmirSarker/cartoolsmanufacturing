@@ -5,8 +5,8 @@ const SpecialItem = () => {
     return (
        
             <div className='container row '>
-<div className=' col-md-6 d-flex align-items-center'>
-    <img className='img-fluid rounded-circle' src={extra} alt=''></img>
+<div className=' col-md-6 d-flex align-items-center '>
+    <img className='img-fluid rounded-3 ' src={extra} alt=''></img>
 
 </div>
 <div className='col-md-6 text-light text-end'>
