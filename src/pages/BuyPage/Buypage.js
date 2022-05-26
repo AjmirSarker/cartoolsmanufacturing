@@ -40,8 +40,10 @@ const Buypage = () => {
     const Email = e.target.email.value;
     const Phone = e.target.phone.value;
     const Address = e.target.address.value;
+    const totalPrice=parseInt(product.price * productQuantity)
+    // console.log(totalPrice);
   
-const Order = {name:Name,quantity:productQuantity,email:Email,phone :Phone,address:Address,product:productname,price:price}
+const Order = {name:Name,quantity:productQuantity,email:Email,phone :Phone,address:Address,product:productname,price:price,totalPrice:totalPrice}
  
     if (productQuantity < product.minorder || productQuantity > product.quantity) {
       setCount(true);
@@ -207,40 +209,7 @@ description:product.description
             </Form>
             
           </div>
-          <div className="w-50 my-5 mx-auto ">
-      
-      <h1>Add New Review</h1>
-      <form onSubmit={HandleAddItem}>
-          <div class="mb-3">
-                <input value={product?.name} type="text" 
-                readOnly
-                
-                name='name' class="form-control"/>
-            </div>
-            <div class="mb-3">
-                <input type="text" 
-                readOnly
-                value={user?.displayName}name='username' class="form-control"/>
-            </div>
-            <div class="mb-3">
-                <input 
-                readOnly
-                value={product.img1} type="text" name='image' class="form-control"/>
-            </div>
-            <div class="mb-3">
-                <input name='rating'
-                required placeholder='Ratings' type="number" class="form-control"/>
-                <p className='d-flex text-danger fw-bold'>Rating from 1 to 5</p>
-            </div>
-            <div class="mb-3">
-                <textarea name='review' placeholder='review' class="form-control"
-                required rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <input className='btn fw-bold btn-success  btn-outline-warning' type="submit" value='Add review'/>
-            </div>
-          </form>
-    </div>
+        
         </div>
         
       </div>

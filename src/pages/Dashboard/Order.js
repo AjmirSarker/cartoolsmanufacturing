@@ -1,25 +1,37 @@
 import React, {useEffect,useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import useOrders from '../../Hooks/useOrders'
+import CustomLink from '../Shared/CustomLink';
 
 const Order = ({ index,order }) => {
+  const navigate = useNavigate()
   const [show, setShow] = useState(false);
-  const [Order, setOrder] = useState([]);
-  useEffect(() => {
-    
-      fetch(`http://localhost:5000/product?name=${order?.product}`)
-        .then((res) => res.json())
-        .then((data) => setOrder(data));
-    
-  }, [order]);
+  const [Order,setOrder] = useState([]);
+  const[meow,setMeow]=useState([])
+  const[products,setProducts]=useState([])
+  const home=()=>{
+    navigate('/')
+  }
+ 
   // console.log(Order);
   const [Delete, setDelete] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [orders, setOrders] = useOrders();
   const sendMyItemDelete = (id) => {
+    fetch(`http://localhost:5000/product?name=${order?.product}`)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setMeow(data)});
+        console.log(meow);
     setDelete(true);
+
     if (Delete) {
+     
+      
+        
       const url = `http://localhost:5000/orders/${id}`;
       fetch(url, {
         method: 'DELETE'
@@ -37,6 +49,9 @@ const Order = ({ index,order }) => {
             setShow(false)
           }
         });
+        
+    
+ 
 
     } else {
     }
@@ -47,11 +62,16 @@ const Order = ({ index,order }) => {
         <td>{`${index +1}`}</td>
       <td>{order?.product}</td>
       <td>{order?.quantity}</td>
-      <td>${`${order?.price * order?.quantity}`}</td>
+      <td>${`${order?.price * order?.quantity} `}</td>
       <td>
-        <button type="button" class="btn btn-sm btn-success">
-          Pay
-        </button>
+       {
+         !order.paid && <CustomLink to={`/dashboard/payment/${order?._id}`}><button onClick={home} type="button" class="btn btn-sm btn-success">
+         Pay
+       </button></CustomLink>
+       }
+       {
+         order.paid && <p className='text-success'>Paid</p>
+       }
       </td>
       
      

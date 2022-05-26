@@ -18,7 +18,7 @@
   .myCarousel {
     background: #fafafa;
     margin-top: -6%;
-    width: 54%;
+    width: 64%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 6%;
@@ -26,7 +26,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border: 1px solid #ddd;
-    height: 286px;
+    min-height: 286px;
   }
   
   .carousel .control-dots {
@@ -50,7 +50,7 @@
     margin-top: 0;
     padding-top: 0;
     font-weight: 500;
-    color: #787878;
+    color: #883838;
     font-size: 14px;
   }
   
@@ -82,7 +82,7 @@
   
   .carousel .control-dots .dot {
     box-shadow: none !important;
-    background: #454545 !important;
+    background: #565353 !important;
     outline: 0;
   }
   
@@ -91,6 +91,7 @@
     height: 50px !important;
     position: absolute;
     top: 35% !important;
+    
   }
   
   .App {
