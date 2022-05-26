@@ -132,9 +132,9 @@ const resetPassword = async () => {
         </div>
          </Form>
          {/* <Link className='d-flex justify-content-end w-75 pe-3 text-danger text-decoration-none ' onClick={resetPassword}  to='/login'> forget password?</Link> */}
-         <div className='d-flex '>
+         {/* <div className='d-flex '>
                    <button onClick={resetPassword} className='p-text mb-3 p-1 rounded bt btn-info me-auto'>Reset password?</button>
-                   </div>
+                   </div> */}
         
        <div className='w-50'>
        <GoogleButton
@@ -149,24 +149,4 @@ const resetPassword = async () => {
 };
 
 export default Login;
-{/* <Form.Group className="mb-3" controlId="formBasicEmail">
-<Form.Label className='d-flex ms-3'>Email</Form.Label>
-<Form.Control     
-{...register("email", {
-   required: {
-       value: true,
-       message: 'Email is Required'
-   },
-   pattern: {
-       value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-       message: 'Provide a valid Email'
-   }
-})}
- type="email"
- ref={emailRef}
- placeholder="Enter email" className='border border-success rounded-pill w-75' name='email' />
-<Form.Label className='d-flex ms-3 my-2'>
-{errors.email?.type === 'required' && <span className=" text-danger">{errors.email.message}</span>}
-{errors.email?.type === 'pattern' && <span className="text-danger">{errors.email.message}</span>}
-</Form.Label>
-</Form.Group> */}
+

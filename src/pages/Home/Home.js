@@ -24,9 +24,10 @@ import Summary from './Summary';
 
 const Home = () => {
     const [products] =useData()
+    const revProduct=products.reverse()
     const [loading,setLoading]=useState(false)
     const[reviews]=useReviews ()
-    const Reverse= reviews.reverse()
+   
     // if(products.length<=0){
     //     return <Loading> </Loading>
     // }
@@ -44,7 +45,7 @@ const Home = () => {
           <div className='container my-5 '>
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">{
               
-          products.slice(0,6).map(product=><Product more={2} product={product}></Product>)}
+              products.slice(0,6).map(product=><Product more={2} product={product}></Product>)}
           </div> 
           <div className='d-flex my-1 justify-content-end '> <Link className='text-decoration-none text-success fw-bolder' to='/allproducts'> {`more products ->`}</Link> </div>   
          
@@ -53,7 +54,9 @@ const Home = () => {
            
 <Summary></Summary>
        </div>
-       <Myteam></Myteam>
+       <div className='my-5'>
+           <h1 className='my-3'>Management Committee</h1>
+           <Myteam></Myteam></div>
       
        <div className=' my-5 '>
            <h2 className='fw-bold'>Reviews</h2>
