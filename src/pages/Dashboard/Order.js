@@ -73,6 +73,8 @@ const Order = ({ index,order }) => {
        {
          order.paid && <p className='text-success'>Paid</p>
 
+       }{
+         order.paid && <p className='text-success'>{order.transactionId}</p>
        }
        
       </td>

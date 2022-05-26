@@ -32,6 +32,7 @@ const Header = () => {
               <CustomLink className="nav-link fs-4"  to="/blog" >Blogs</CustomLink>
               {/* <CustomLink className="nav-link fs-4"  to="/reviews" >Review</CustomLink> */}
               <CustomLink className="nav-link fs-4"  to="/dashboard" >DashBoard</CustomLink>
+              <CustomLink className="nav-link fs-4"  to="/myportfolio" >My Portfolio</CustomLink>
             
 
              

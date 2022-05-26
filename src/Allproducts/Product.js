@@ -16,7 +16,7 @@ const Product = ({product,more}) => {
           const Reverse=()=>{
             setDes(product?.img1)
           }
-          const minides = `${product?.description?.substring(0,30)}...`
+          const minides = `${product?.description?.substring(0,40)}...`
         
     return (
         <div class="col">

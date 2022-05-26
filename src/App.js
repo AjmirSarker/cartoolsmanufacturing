@@ -27,6 +27,7 @@ import OrderAdmin from './pages/Dashboard/OrderAdmin';
 import AddProduct from './pages/Dashboard/AddProduct';
 import ManageProductAdmin from './pages/Dashboard/ManageProductAdmin';
 import NameandEmail from './pages/Shared/NameandEmail';
+import MyPortfolio from './pages/MyPortfolio/MyPortfolio';
 
 //<Route path='' element={}></Route>
 function App() {
@@ -54,6 +55,7 @@ function App() {
           <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='manageproduct' element={<RequireAdmin><ManageProductAdmin></ManageProductAdmin></RequireAdmin>}></Route>
         </Route>
+        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
       
      </Routes >
      <div className='sticky-footer mt-5'>
