@@ -65,6 +65,7 @@ const Home = () => {
 
 <HomeReview></HomeReview>
 <div className='bg-success p-2 mt-5'>
+  <h1 className='text-light fw-bolder'>  Special Offer</h1>
 <div className='my-5 container'>
     <SpecialItem></SpecialItem>
 
