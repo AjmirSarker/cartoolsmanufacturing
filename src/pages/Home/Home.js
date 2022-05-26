@@ -17,6 +17,7 @@ import Banner from './Banner';
 
 
 import './Home.module.css'
+import Summary from './Summary';
 
 
 
@@ -48,6 +49,10 @@ const Home = () => {
           <div className='d-flex my-1 justify-content-end '> <Link className='text-decoration-none text-success fw-bolder' to='/allproducts'> {`more products ->`}</Link> </div>   
          
         </div>
+       <div className='my-5'>
+           
+<Summary></Summary>
+       </div>
        <Myteam></Myteam>
       
        <div className=' my-5 '>

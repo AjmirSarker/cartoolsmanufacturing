@@ -7,6 +7,7 @@ import useAdmin from '../../Hooks/useAdmin';
 import CustomLink from '../Shared/CustomLink';
 import './Dashboard.css'
 import MyOrders from './MyOrders';
+import UserProfile from './UserProfile';
 
 const Dashboard = () => {
     const[user]=useAuthState(auth)
@@ -30,13 +31,13 @@ const Dashboard = () => {
                     <button type="button" class="btn-close text-warning " data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body text-start bg-cyan ">
-                   <p> {!admin &&<Link className='nav-link text-dark fw-bold'  to='/dashboard '>My Orders</Link>}</p>
+                   <p> {!admin &&<Link className='nav-link text-dark fw-bold'  to='/dashboard/myorders '>My Orders</Link>}</p>
                    <p> {
                        !admin && <Link className='nav-link text-dark fw-bold' to='/dashboard/addreview'>Add A review</Link>
                        }
                    </p>               
                    <p>
-                   <Link className='nav-link text-dark fw-bold' to='/dashboard/userprofile'>Profile</Link>
+                   <Link className='nav-link text-dark fw-bold' to='/dashboard'>Profile</Link>
                    
                    </p>
                    <p>{

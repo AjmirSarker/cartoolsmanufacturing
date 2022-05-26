@@ -1,0 +1,31 @@
+.summary {
+    /* background-color: #f8f8f8; */
+    
+    background-image: url('../../Banner/bgm.jpg');
+}
+
+.summary-icon {
+    font-size: 50px;
+    margin-bottom: .5rem;
+}
+
+.summary-h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.summary-h3,
+.summary-icon {
+    color: #28aaa9;
+}
+
+.summary2 {
+    width: 230px;
+    height: auto;
+}
+
+.summary-h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}

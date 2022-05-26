@@ -62,21 +62,21 @@ const UserProfile = () => {
     }
 
     return (
-        <div>
+        <div><h1>User Name :</h1>
             <h1>{user.displayName}</h1>
-            <hr />
-            <h5 className='mb-5'>{user.email}</h5>
+            <hr className='text-danger' />
+            <h5 className='mb-5'>Email : {user.email}</h5>
             <form onSubmit={saveProfile} className='d-flex mb-2 mx-auto flex-column user-profile-container'>
                
-                {updateProfileButton === true ? <h4>Address :{profiles?.address?.slice(0,10)}</h4> : <input required name='address' className='mb-2' placeholder='address' />}
-                {updateProfileButton === true ? <h4>Education:{profiles?.education} </h4> : <input required className='mb-2' placeholder='education' name='education' />}
-                {updateProfileButton === true ? <h4>Phone: {profiles?.phone} </h4> : <input required className='mb-2' placeholder='phone number' name='phone' />}
-                {updateProfileButton === true ? <h4>Linkedin: {profiles?.social} </h4> : <input required className='mb-2' placeholder='Linkedin: ' name='social' />}
+                {updateProfileButton === true ? <h4>Address :{profiles?.address?.slice(0,10)}</h4> : <input required  name='address' className='mb-2 border border-info' placeholder='address' />}
+                {updateProfileButton === true ? <h4>Education:{profiles?.education} </h4> : <input required className='mb-2 border border-info' placeholder='education' name='education' />}
+                {updateProfileButton === true ? <h4>Phone: {profiles?.phone} </h4> : <input required className='mb-2 border border-info' placeholder='phone number' name='phone' />}
+                {updateProfileButton === true ? <h4>Linkedin: {profiles?.social} </h4> : <input required className='mb-2 border border-info' placeholder='Linkedin: ' name='social' />}
                 {
                 updateProfileButton === true ? <button 
                 
                 className='mb-5 btn btn-primary text-uppercase' onClick={editProfile}>Update profile</button> : <button
-                type='submit' className='mb-5 text-uppercase btn btn-success' >save</button>
+                type='submit' className='mb-5  text-uppercase btn btn-success' >save</button>
             }
             </form>
 

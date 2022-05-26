@@ -39,40 +39,40 @@ const Myteam = () => {
          <SwiperSlide>
        <div class="card bg-dark text-white">
   <img src={p1} class="card-img" alt="..."/>
-  <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+  <div class="card-img-overlay d-flex flex-column justify-content-end">
+    <h5 class="card-title fw-bold ">Selena Domes</h5>
+    <p class="card-text fw-bold">Chief Product Officer</p>
+    
   </div>
 </div>
        </SwiperSlide>
        <SwiperSlide>
        <div class="card bg-dark text-white">
   <img src={p2} class="card-img" alt="..."/>
-  <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+  <div class="card-img-overlay  d-flex flex-column justify-content-end">
+    <h5 class="card-title fw-bold ">Arafat Sarker</h5>
+    <p class="card-text fw-bold ">Chief Executive Officer</p>
+   
   </div>
 </div>
        </SwiperSlide>
        <SwiperSlide>
        <div class="card bg-dark text-white">
   <img src={p3} class="card-img" alt="..."/>
-  <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+  <div class="card-img-overlay  d-flex flex-column justify-content-end">
+    <h5 class="card-title fw-bold">Christen Homes</h5>
+    <p class="card-text text-info fw-bold">Chief Customer and Sales Officer</p>
+   
   </div>
 </div>
        </SwiperSlide>
        <SwiperSlide>
        <div class="card bg-dark text-white">
   <img src={p4} class="card-img" alt="..."/>
-  <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+  <div class="card-img-overlay d-flex flex-column justify-content-end">
+    <h5 class="card-title fw-bold">Edwin Gear</h5>
+    <p class="card-text fw-bold">Chief Information Officer</p>
+  
   </div>
 </div>
        </SwiperSlide>
