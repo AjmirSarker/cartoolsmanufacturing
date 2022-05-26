@@ -10,6 +10,7 @@ const Order = ({ index,order }) => {
   const [Order,setOrder] = useState([]);
   const[meow,setMeow]=useState([])
   const[products,setProducts]=useState([])
+  
   const home=()=>{
     navigate('/')
   }
@@ -71,13 +72,16 @@ const Order = ({ index,order }) => {
        }
        {
          order.paid && <p className='text-success'>Paid</p>
+
        }
+       
       </td>
       
      
       
       <td>
         <button
+        disabled={order.paid}
           onClick={handleShow}
           type="button"
           class="btn btn-sm btn-danger"

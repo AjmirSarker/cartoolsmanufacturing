@@ -23,19 +23,25 @@ import UserProfile from './pages/Dashboard/UserProfile';
 import AllUser from './pages/Dashboard/AllUser';
 import RequireAdmin from './pages/Register/RequireAdmin';
 import Payment from './pages/Dashboard/Payment';
+import OrderAdmin from './pages/Dashboard/OrderAdmin';
+import AddProduct from './pages/Dashboard/AddProduct';
+import ManageProductAdmin from './pages/Dashboard/ManageProductAdmin';
+import NameandEmail from './pages/Shared/NameandEmail';
 
 //<Route path='' element={}></Route>
 function App() {
   return (
     <div className="App">
+
     <Header></Header>
+    <NameandEmail></NameandEmail>
      <Routes>
        <Route path='/' element={<Home></Home>}></Route>
        <Route path='/allproducts' element={<AllProducts></AllProducts>}></Route>
        <Route path='/blog' element={<Blog></Blog>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<Signup></Signup>}></Route>
-       <Route path='/buypage/:id' element={<Buypage></Buypage>}></Route>
+       <Route path='/buypage/:id' element={<RequireAuth><Buypage></Buypage></RequireAuth>}></Route>
        <Route path='/reviews' element={<RequireAuth><Review></Review></RequireAuth>}></Route>
        <Route path='*' element={<NotFound></NotFound>}></Route>
        <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth> }>
@@ -44,6 +50,9 @@ function App() {
           <Route path='userprofile' element={<UserProfile />}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='allusers' element={<RequireAdmin><AllUser></AllUser></RequireAdmin>}></Route>
+          <Route path='allorder' element={<RequireAdmin><OrderAdmin></OrderAdmin></RequireAdmin>}></Route>
+          <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='manageproduct' element={<RequireAdmin><ManageProductAdmin></ManageProductAdmin></RequireAdmin>}></Route>
         </Route>
       
      </Routes >

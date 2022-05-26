@@ -4,6 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 import AllProducts from '../../Allproducts/AllProducts';
 import auth from '../../Firebase/firebase.init';
 import useAdmin from '../../Hooks/useAdmin';
+import CustomLink from '../Shared/CustomLink';
 import './Dashboard.css'
 import MyOrders from './MyOrders';
 
@@ -28,15 +29,28 @@ const Dashboard = () => {
                   
                     <button type="button" class="btn-close text-warning " data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body text-start ">
-                   <p> <Link className='nav-link text-dark fw-bold'  to='/dashboard '>My Orders</Link></p>
-                   <p> <Link className='nav-link text-dark fw-bold' to='/dashboard/addreview'>Add A review</Link></p>               
+                <div class="offcanvas-body text-start bg-cyan ">
+                   <p> {!admin &&<Link className='nav-link text-dark fw-bold'  to='/dashboard '>My Orders</Link>}</p>
+                   <p> {
+                       !admin && <Link className='nav-link text-dark fw-bold' to='/dashboard/addreview'>Add A review</Link>
+                       }
+                   </p>               
                    <p>
                    <Link className='nav-link text-dark fw-bold' to='/dashboard/userprofile'>Profile</Link>
                    
                    </p>
                    <p>{
-                       admin && <Link className='nav-link text-dark fw-bold' to='/dashboard/allusers'>All Users</Link>
+                       admin && <CustomLink className='nav-link text-dark fw-bold' to='/dashboard/allusers'>All Users</CustomLink>
+}</p>
+
+<p>{
+                       admin && <CustomLink className='nav-link text-dark fw-bold' to='/dashboard/allorder'>Manage Orders</CustomLink>
+}</p>
+<p>{
+                       admin && <CustomLink className='nav-link text-dark fw-bold' to='/dashboard/addproduct'>Add Product</CustomLink>
+}</p>
+<p>{
+                       admin && <CustomLink className='nav-link text-dark fw-bold' to='/dashboard/manageproduct'>Manage Product</CustomLink>
 }</p>
                 </div>
             </div>

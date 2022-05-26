@@ -106,42 +106,42 @@ description:product.description
 
     
   };
-  const HandleAddItem = (e) => {
-    e.preventDefault()
+  // const HandleAddItem = (e) => {
+  //   e.preventDefault()
     
-    const ratings = e.target.rating.value;
-    if(ratings>0 && ratings<=5){
-      const name = e.target.name.value;
-    const username = e.target.username.value;
-   const image = e.target.image.value
+  //   const ratings = e.target.rating.value;
+  //   if(ratings>0 && ratings<=5){
+  //     const name = e.target.name.value;
+  //   const username = e.target.username.value;
+  //  const image = e.target.image.value
     
-    const description= e.target.review.value;
-    const data ={image,ratings,name,username,description}
-    console.log(data);
-    const url = 'http://localhost:5000/reviews';
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result);
-      });
-      toast.success('Your review have been saved')
-      e.target.reset()
-    }else{
-      toast.error('Enter rating between 1 to  5')
-    }
+  //   const description= e.target.review.value;
+  //   const data ={image,ratings,name,username,description}
+  //   console.log(data);
+  //   const url = 'http://localhost:5000/reviews';
+  //   fetch(url, {
+  //     method: 'POST',
+  //     headers: {
+  //       'content-type': 'application/json'
+  //     },
+  //     body: JSON.stringify(data)
+  //   })
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       console.log(result);
+  //     });
+  //     toast.success('Your review have been saved')
+  //     e.target.reset()
+  //   }else{
+  //     toast.error('Enter rating between 1 to  5')
+  //   }
 
   
      
-  };
-  if(loading){
+  // };
+  // if(loading){
     
-  }
+  // }
 
   return (
     <div className="bg-info bg-gradient ">
