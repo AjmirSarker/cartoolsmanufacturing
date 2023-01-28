@@ -6,7 +6,7 @@ const ManageProductAdmin = () => {
   const [products] = useData();
 
   const Deliver = (id) => {
-    const url = `https://sarkermanufacturers.herokuapp.com/products/${id}`;
+    const url = `https://carmanufacturingserver.onrender.com/products/${id}`;
     fetch(url, {
       method: 'DELETE'
     })

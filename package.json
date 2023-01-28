@@ -50,5 +50,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Firerbase site link\r https://car-manufacturing.web.app/",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AjmirSarker/cartoolsmanufacturing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AjmirSarker/cartoolsmanufacturing/issues"
+  },
+  "homepage": "https://github.com/AjmirSarker/cartoolsmanufacturing#readme"
 }

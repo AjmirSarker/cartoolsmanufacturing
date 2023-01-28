@@ -13,7 +13,7 @@ const CheckoutForm = ({ pay }) => {
   const { totalPrice, _id, name, product, email } = pay;
 
   useEffect(() => {
-    fetch('https://sarkermanufacturers.herokuapp.com/create-payment-intent', {
+    fetch('https://carmanufacturingserver.onrender.com/create-payment-intent', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -67,7 +67,7 @@ const CheckoutForm = ({ pay }) => {
         order: _id,
         transactionId: paymentIntent.id
       };
-      fetch(`https://sarkermanufacturers.herokuapp.com/orders/${_id}`, {
+      fetch(`https://carmanufacturingserver.onrender.com/orders/${_id}`, {
         method: 'PATCH',
         headers: {
           'content-type': 'application/json'

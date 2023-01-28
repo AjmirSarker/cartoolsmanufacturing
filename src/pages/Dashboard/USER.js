@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 const USER = ({ index, user, refetch }) => {
   const { email, role } = user;
   const makeadmin = () => {
-    fetch(`https://sarkermanufacturers.herokuapp.com/users/admin/${email}`, {
+    fetch(`https://carmanufacturingserver.onrender.com/users/admin/${email}`, {
       method: 'PUT'
     })
       .then((res) => {

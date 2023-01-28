@@ -6,7 +6,7 @@ const OrderAdmin = () => {
   const [orders] = useOrders();
 
   const Deliver = (id) => {
-    const url = `https://sarkermanufacturers.herokuapp.com/orders/${id}`;
+    const url = `https://carmanufacturingserver.onrender.com/orders/${id}`;
     fetch(url, {
       method: 'DELETE'
     })

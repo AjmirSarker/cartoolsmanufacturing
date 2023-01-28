@@ -14,7 +14,7 @@ const AddProduct = () => {
     const description = e.target.description.value;
     const data = { name, img1, img2, price, quantity, minorder, description };
     console.log(data);
-    const url = 'https://sarkermanufacturers.herokuapp.com/products';
+    const url = 'https://carmanufacturingserver.onrender.com/products';
     fetch(url, {
       method: 'POST',
       headers: {

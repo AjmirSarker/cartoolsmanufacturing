@@ -22,7 +22,7 @@ const Order = ({ index, order }) => {
   const [orders, setOrders] = useOrders();
   const sendMyItemDelete = (id) => {
     fetch(
-      `https://sarkermanufacturers.herokuapp.com/product?name=${order?.product}`
+      `https://carmanufacturingserver.onrender.com/product?name=${order?.product}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -33,7 +33,7 @@ const Order = ({ index, order }) => {
     setDelete(true);
 
     if (Delete) {
-      const url = `https://sarkermanufacturers.herokuapp.com/orders/${id}`;
+      const url = `https://carmanufacturingserver.onrender.com/orders/${id}`;
       fetch(url, {
         method: 'DELETE'
       })

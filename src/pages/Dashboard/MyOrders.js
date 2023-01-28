@@ -10,7 +10,7 @@ const MyOrders = () => {
   useEffect(() => {
     if (user) {
       fetch(
-        `https://sarkermanufacturers.herokuapp.com/individual?email=${user?.email}`
+        `https://carmanufacturingserver.onrender.com/individual?email=${user?.email}`
       )
         .then((res) => res.json())
         .then((data) => setOrder(data));

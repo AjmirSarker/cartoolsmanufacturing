@@ -21,7 +21,7 @@ const Buypage = () => {
 
   useEffect(() => {
     setLoader(true);
-    const url = `https://sarkermanufacturers.herokuapp.com/products/${id}`;
+    const url = `https://carmanufacturingserver.onrender.com/products/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -81,7 +81,7 @@ const Buypage = () => {
         minorder: product.minorder,
         description: product.description
       };
-      const url2 = `https://sarkermanufacturers.herokuapp.com/products/${id}`;
+      const url2 = `https://carmanufacturingserver.onrender.com/products/${id}`;
       fetch(url2, {
         method: 'PUT',
         headers: {
@@ -95,7 +95,7 @@ const Buypage = () => {
           console.log('data success', data);
         });
 
-      const url = 'https://sarkermanufacturers.herokuapp.com/orders';
+      const url = 'https://carmanufacturingserver.onrender.com/orders';
       fetch(url, {
         method: 'POST',
         headers: {
@@ -123,7 +123,7 @@ const Buypage = () => {
   //   const description= e.target.review.value;
   //   const data ={image,ratings,name,username,description}
   //   console.log(data);
-  //   const url = 'https://sarkermanufacturers.herokuapp.com/reviews';
+  //   const url = 'https://carmanufacturingserver.onrender.com/reviews';
   //   fetch(url, {
   //     method: 'POST',
   //     headers: {

@@ -16,7 +16,7 @@ const AddReview = () => {
       const description = e.target.review.value;
       const data = { image, ratings, username, description };
       console.log(data);
-      const url = 'https://sarkermanufacturers.herokuapp.com/reviews';
+      const url = 'https://carmanufacturingserver.onrender.com/reviews';
       fetch(url, {
         method: 'POST',
         headers: {

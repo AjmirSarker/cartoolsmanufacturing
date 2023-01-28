@@ -11,7 +11,7 @@ const AllUser = () => {
     isloading,
     refetch
   } = useQuery('users', () =>
-    fetch('https://sarkermanufacturers.herokuapp.com/users', {
+    fetch('https://carmanufacturingserver.onrender.com/users', {
       method: 'GET'
     }).then((res) => res.json())
   );

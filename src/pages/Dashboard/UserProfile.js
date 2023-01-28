@@ -7,7 +7,7 @@ const UserProfile = () => {
   const [user] = useAuthState(auth);
   const [profiles, setProfiles] = useState([]);
   useEffect(() => {
-    fetch(`https://sarkermanufacturers.herokuapp.com/users/${user.email}`)
+    fetch(`https://carmanufacturingserver.onrender.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setProfiles(data[0]);
@@ -34,7 +34,7 @@ const UserProfile = () => {
     // console.log(e.target?.education.value);
     // console.log(e.target?.phone.value);
     // console.log(e.target?.social.value);
-    const url = `https://sarkermanufacturers.herokuapp.com/users/${user?.email}`;
+    const url = `https://carmanufacturingserver.onrender.com/users/${user?.email}`;
     fetch(url, {
       method: 'PUT',
       headers: {
